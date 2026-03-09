@@ -1,1 +1,5 @@
 venv/
+Caching_Proxy.egg-info/
+__pycache__/
+*.pyc
+cache.json
