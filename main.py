@@ -37,7 +37,7 @@ cache = load_cache()
 @app.get("/{path:path}")
 async def proxy_(path: str, request: Request):
     if path in cache:
-        content = cache[path]["content"].encode("utf-8")  # ✅ string → bytes
+        content = cache[path]["content"].encode("utf-8")  # string → bytes
         status_code = cache[path]["status_code"]
         headers = cache[path]["headers"]
         headers["X-Cache"] = "HIT"
